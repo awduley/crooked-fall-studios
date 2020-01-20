@@ -1,0 +1,47 @@
+$primary-background: #2a727c;
+$primary-color: #851209;
+$secondary-color: #edc46d;
+$background-gray: rgb(68, 68, 68);
+
+$background-image: url('../../img/nebula.png');
+
+@mixin transition {
+  transition: all 400ms ease-out;
+}
+
+// Media query mixins
+@mixin super-small {
+  @media screen and (max-width: 430px) {
+    @content;
+  }
+}
+
+@mixin phone-only {
+  @media screen and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-up {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet-in-between-up {
+  @media screen and (min-width: 780px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-up {
+  @media screen and (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}

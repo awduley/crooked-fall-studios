@@ -1,0 +1,295 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+html {
+  height: 100%;
+}
+
+h1,
+h2, 
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+
+  &.dark {
+    color: #000;
+  } 
+
+  span {
+    color: $primary-color;
+  } 
+}  
+
+h1 {
+  font-size: 5.6rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  padding: 4px 8px;
+  background: $background-gray;
+  display: inline-block;
+}
+
+h3 { 
+  font-size: 3rem;
+  margin-bottom: 18px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 18px;
+}
+
+img.pic {
+  margin-bottom: 18px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+// Top section
+.top-section {
+  height: 100vh;
+  background: $primary-background;
+}
+
+// About Me section
+section.about-section {
+
+  .about-area {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px; 
+  
+    .pic {
+      width: 340px;
+      height: auto;
+      border-radius: 50%;
+      border: 3px solid $primary-color;
+      margin: 0 20px 0 0;
+    }
+  
+    .about-text {
+      width: 50%;
+    }
+  }
+}
+
+
+// Projects section
+.projects-section {
+  background: $primary-background; 
+
+  .project {
+    display: flex;
+    align-items: center;
+
+    .project-info-container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      width: 100%;
+
+      h3 {
+        font-size: 1.4rem;
+        text-align: center;
+      }
+
+      p {
+        color: darken($background-gray, 14);
+      }
+
+      .project-info {
+        width: 100%;
+      }
+
+      .project-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        .btn {
+          width: 148px;
+          height: auto;
+          padding: 8px;
+          border-radius: 4px; 
+          font-size: 1.2rem;
+          text-align: center;
+          margin: 10px 10px 0;
+
+          a {
+            @include transition;
+          }
+        }
+  
+        .btn1 {
+          background: $secondary-color;
+
+          i {
+            margin: 0 6px;
+            color: #000;
+          }
+
+          a {
+            color: #000
+          }
+  
+          a:hover {
+            color: $primary-color;
+          }
+        }
+  
+        .btn2 {
+          background: $primary-color;
+
+          i {
+            margin: 0 6px;
+            color: #fff; 
+          }
+          
+          a {
+            color: #fff;  
+          }
+
+          a:hover {
+            color: $secondary-color; 
+          }  
+        }
+      }
+    }
+ 
+    
+
+    .project-img { 
+      width: 100%;
+      
+      img {
+        width: 70%;
+        height: auto; 
+        display: block;
+        margin: 0 auto 10px; 
+      }
+    }
+  }
+}
+
+// Contact Me section
+.contact-section {
+ 
+  font-size: 1.6rem; 
+   
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;           
+  
+ 
+    .box {
+      display: inline-block; 
+      padding: 4px 8px;
+      border: 3px solid $primary-color;
+      margin: 20px;
+      cursor: pointer;
+      @include transition; 
+      transform: scale(1);
+
+      &:hover {
+        transform: scale(1.1);
+        color: #fff;
+        background: $primary-color;
+      }
+    }
+  }
+}
+
+// Resume section
+.resume-section {
+  background: $primary-background;
+
+  .resume-btn {
+    width: 122px;
+    height: auto;
+    color: #fff;
+    padding: 4px;
+    font-size: 1.2rem;
+    background: $primary-color;
+    margin: 16px auto;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      color: $secondary-color; 
+    }
+  }
+}
+
+
+// Footer section  
+footer {
+  width: 100%;
+
+  .footer-section { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: $background-gray;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  
+    .social-media-icons i {
+      margin: 0 8px;
+      margin-bottom: 14px;
+      color: #fff;
+      @include transition;
+  
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  
+    .date {
+      color: #fff;
+    }
+  }
+}  
+
+@import 'media-queries'; 
+
+
