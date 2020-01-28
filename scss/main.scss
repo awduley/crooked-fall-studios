@@ -98,7 +98,7 @@ section.about-section {
     }
   
     .about-text {
-      width: 50%;
+      width: 50%;  
     }
   }
 }
@@ -239,6 +239,21 @@ section.about-section {
 .resume-section {
   background: $primary-background;
 
+  .resume-area {
+    text-align: center;
+
+    .resume {
+      color: $secondary-color;
+      margin-bottom: 10px;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        color: darken($secondary-color, 16);
+      }
+    }
+  }
+
   .resume-btn {
     width: 122px;
     height: auto;
@@ -250,7 +265,7 @@ section.about-section {
     text-align: center;
     border-radius: 4px;
     cursor: pointer;
-    @include transition;
+    @include transition; 
 
     &:hover {
       color: $secondary-color; 

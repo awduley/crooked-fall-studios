@@ -131,7 +131,11 @@
 
 @include desktop-up {
 
- 
+  .projects-section {
+    .project {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 

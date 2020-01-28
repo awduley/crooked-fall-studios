@@ -161,6 +161,15 @@ section.about-section .about-area {
 
 .resume-section {
   background: #2a727c; }
+  .resume-section .resume-area {
+    text-align: center; }
+    .resume-section .resume-area .resume {
+      color: #edc46d;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 400ms ease-out; }
+      .resume-section .resume-area .resume:hover {
+        color: #e4a724; }
   .resume-section .resume-btn {
     width: 122px;
     height: auto;
@@ -261,3 +270,7 @@ footer {
     width: 100%; }
     .project-img img {
       width: 70%; } }
+
+@media screen and (min-width: 1200px) {
+  .projects-section .project {
+    margin-bottom: 20px; } }
